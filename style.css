@@ -1,0 +1,230 @@
+.body,html{
+    width: 100%;
+    height: 100%;
+    
+}
+.body{
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.container{
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.black_border{
+    width: 80%;
+    height: 100%;
+    border: 30px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small_container{
+    width: 90%;
+    height: 100%;
+    border:10px solid grey;
+    margin: 20px auto;
+    position: relative;
+    
+}
+.triangle{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    
+}
+.triangle-topright {
+    right: 0;
+    position: absolute;
+    border-top: 200px solid grey;
+    border-left: 200px solid transparent;
+    z-index: 99;
+}
+
+.triangle img{
+    padding: 20px;
+    widows: 60px;
+    height: 60px;
+    right: 0;
+    z-index: 1000;
+    position: absolute;
+    
+}    
+.header{
+    margin-top: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.title h1{
+    font-size: 40px;
+}
+
+.input_content{
+    padding: 10 20;   
+}
+
+.input_content input{        
+    width: 500px;
+    height: 80px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.line{
+    margin-top: 100px;
+    
+}
+hr.hor-line{
+    width: 300px;
+    border: 3px solid grey;
+}
+.today{
+    margin:50px auto ;
+}
+.today h1{
+    font-weight:bold;
+}
+.today h1,h2{
+    text-align: center;
+}
+
+@media  (max-width: 768px) {
+    .title{
+        font-size: 20px;
+    }
+    .font{
+        right: 120px;
+        width: 90px;
+    }
+    .triangle-topright {
+        border-top: 150px solid grey;
+        border-left: 150px solid transparent;
+    }
+    .triangle img{
+        width: 50px;
+        height: 40px;
+        padding: 20px;
+    }
+    
+    .input_content input{
+        
+        width: 350px;
+        height: 60px;
+        border: 1px solid grey;
+        border-radius: 30px;
+        
+    }
+    hr.hor-line{
+        width: 200px ;
+    }
+    .black_border{
+        border: 15px solid #000; 
+    }
+}
+@media (max-width: 490px){
+    .title{
+        font-size: 10px;
+    }
+    .font{
+        right: 120px;
+        width: 90px;
+    }
+    .triangle-topright {
+        border-top: 100px solid grey;
+        border-left: 100px solid transparent;
+    }
+    
+    .input_content input{
+        
+        width: 250px;
+        height: 50px;
+        border: 1px solid grey;
+        border-radius: 30px;
+        
+    }
+    .triangle img{
+        width: 40px;
+        height: 30px;
+        padding: 10px;
+    }
+    hr.hor-line{
+        width: 150px ;
+    }
+    .black_border{
+        border: 13px solid #000; 
+    }
+    .hidden{
+        font-size: 20px;
+    }
+
+}
+
+
+
+#hidden{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    z-index: 100;
+    visibility: visible;
+}
+.list_container{
+    display: none;
+    position: relative;
+    height: 100%;
+    margin-top:50px;
+    
+}
+ul,li {
+    list-style: none;
+}
+
+.left_container{
+   
+    padding-right: 20px;
+    border-right: 1px solid grey;
+    width: 35%;
+    display: flex;
+    float: left;
+    display: flex;
+}
+
+.left_container li{
+    border-bottom: 1px solid grey ;
+}
+
+.right_container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    padding-left: 20px ;
+
+}
+
+.header .title:hover ~ .hidden{
+    
+    background-color: green;
+}
+
+.input_content input:hover ~ .list_container{
+    display: block;
+}
